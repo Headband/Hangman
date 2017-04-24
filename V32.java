@@ -10,9 +10,9 @@ public class V32
         Scanner checker = new Scanner (System.in);
         boolean b = check(letters,checker,word);
         if (b == true)
-            System.out.println("You win!");
+            System.out.println("*** [You win!] ***");
         else
-            System.out.println ("You lose!");
+            System.out.println ("D; [You lose!]");
     }
 
     public static boolean check (String[] letters, Scanner checker, String word)
@@ -27,15 +27,14 @@ public class V32
             //System.out.println ("\f");
             String[] correctLetter = new String[26];
             System.out.println ();
-            System.out.println ("Guess a letter");
+            System.out.println ("--- Guess a letter ---");
             String input = checker.nextLine();
 
             boolean validGuess = true;
-            for(int i = 0; i <= letters.length; i++)
+            for(int i = 0; i <= word.length(); i++)
             {
-                if(input .equals(letters[i]))
+                if(input.equals(letters[i]) || input.equals(" ") || input.equals("") || input.matches("^\\d+(\\.\\d+)?"))
                     validGuess = false;
-                break;
             }
 
             if(validGuess == true)
@@ -74,173 +73,179 @@ public class V32
                 System.out.println ("Number of wrong guesses: " + wrongGuess);
             }
 
-            if (wrongGuess == 1)
-            {
-
-                System.out.println("   +----------------------------------+  ");
-                System.out.println("   |                                  | ");
-                System.out.println("   |                                  | ");
-                System.out.println("   |  ");
-                System.out.println("   |  ");
-                System.out.println("   |  ");
-                System.out.println("   |  ");
-                System.out.println("   |  ");
-                System.out.println("   |  ");
-                System.out.println("   |  ");
-                System.out.println("   |  ");
-                System.out.println("   |  ");
-                System.out.println("   |  ");
-                System.out.println("   |  ");
-                System.out.println("   |  ");
-                System.out.println("   |  ");
-                System.out.println(" --^-- "); 
-
-            }
-            else if (wrongGuess == 2)
-            {
-                System.out.println("   +----------------------------------+  ");
-                System.out.println("   |                                  | ");
-                System.out.println("   |                                  | ");
-                System.out.println("   |                                 _     ");
-                System.out.println("   |                               /   \\ ");
-                System.out.println("   |                              (     ) ");
-                System.out.println("   |                                \\ / ");
-                System.out.println("   |  ");
-                System.out.println("   |  ");
-                System.out.println("   |  ");
-                System.out.println("   |  ");
-                System.out.println("   |  ");
-                System.out.println("   |  ");
-                System.out.println("   |  ");
-                System.out.println("   |  ");
-                System.out.println("   |  ");
-                System.out.println(" --^-- "); 
-
-            }
-            else if (wrongGuess == 3)
-            {
-                System.out.println("   +----------------------------------+  ");
-                System.out.println("   |                                  | ");
-                System.out.println("   |                                  | ");
-                System.out.println("   |                                 _     ");
-                System.out.println("   |                               /   \\ ");
-                System.out.println("   |                              (     ) ");
-                System.out.println("   |                                \\ / ");
-                System.out.println("   |                               __|__ ");
-                System.out.println("   |                                 |   ");
-                System.out.println("   |                                 |   ");
-                System.out.println("   |                                 |");
-                System.out.println("   |                                 | ");
-                System.out.println("   |  ");
-                System.out.println("   |  ");
-                System.out.println("   |  ");
-                System.out.println("   |  ");
-                System.out.println("   |  ");
-                System.out.println("   |  ");
-                System.out.println(" --^-- "); 
-
-            }
-            else if (wrongGuess == 4)
-            {
-                System.out.println("   +----------------------------------+  ");
-                System.out.println("   |                                  | ");
-                System.out.println("   |                                  | ");
-                System.out.println("   |                                 _     ");
-                System.out.println("   |                               /   \\ ");
-                System.out.println("   |                              (     ) ");
-                System.out.println("   |                                \\ / ");
-                System.out.println("   |                               __|__ ");
-                System.out.println("   |                                 |  \\ ");
-                System.out.println("   |                                 |   \\ ");
-                System.out.println("   |                                 |    \\");
-                System.out.println("   |                                 |     \\");
-                System.out.println("   |  ");
-                System.out.println("   |  ");
-                System.out.println("   |  ");
-                System.out.println("   |  ");
-                System.out.println("   |  ");
-                System.out.println("   |  ");
-                System.out.println(" --^-- "); 
-
-            }
-            else if (wrongGuess == 5)
-            {
-                System.out.println("   +----------------------------------+  ");
-                System.out.println("   |                                  | ");
-                System.out.println("   |                                  | ");
-                System.out.println("   |                                 _     ");
-                System.out.println("   |                               /   \\ ");
-                System.out.println("   |                              (     ) ");
-                System.out.println("   |                                \\ / ");
-                System.out.println("   |                               __|__ ");
-                System.out.println("   |                              /  |  \\ ");
-                System.out.println("   |                             /   |   \\ ");
-                System.out.println("   |                            /    |    \\");
-                System.out.println("   |                           /     |     \\");
-                System.out.println("   |  ");
-                System.out.println("   |  ");
-                System.out.println("   |  ");
-                System.out.println("   |  ");
-                System.out.println("   |  ");
-                System.out.println("   |  ");
-                System.out.println(" --^-- "); 
-
-            }
-            else if (wrongGuess == 6)
-            {
-                System.out.println("   +----------------------------------+  ");
-                System.out.println("   |                                  | ");
-                System.out.println("   |                                  | ");
-                System.out.println("   |                                 _     ");
-                System.out.println("   |                               /   \\ ");
-                System.out.println("   |                              (     ) ");
-                System.out.println("   |                                \\ / ");
-                System.out.println("   |                               __|__ ");
-                System.out.println("   |                              /  |  \\ ");
-                System.out.println("   |                             /   |   \\ ");
-                System.out.println("   |                            /    |    \\");
-                System.out.println("   |                           /     |     \\");
-                System.out.println("   |                                  \\ ");
-                System.out.println("   |                                   \\");
-                System.out.println("   |                                    \\");
-                System.out.println("   |                                     \\");
-                System.out.println("   |  ");
-                System.out.println("   |  ");
-                System.out.println(" --^-- "); 
-
-            }
-            else if (wrongGuess == 7)
-            {
-                System.out.println("   +---------------------------+  ");
-                System.out.println("   |                           | ");
-                System.out.println("   |                           | ");
-                System.out.println("   |                           _     ");
-                System.out.println("   |                         /   \\ ");
-                System.out.println("   |                        (     ) ");
-                System.out.println("   |                          \\ / ");
-                System.out.println("   |                         __|__ ");
-                System.out.println("   |                        /  |   \\");
-                System.out.println("   |                       /   |    \\ ");
-                System.out.println("   |                      /    |     \\ ");
-                System.out.println("   |                     /     |      \\ ");
-                System.out.println("   |                          / \\ ");
-                System.out.println("   |                         /   \\");
-                System.out.println("   |                        /     \\");
-                System.out.println("   |                       /       \\ ");
-                System.out.println("   |  ");
-                System.out.println("   |  ");
-                System.out.println(" --^-- "); 
-
-            }
-
+            image(wrongGuess);
+            
             if (correctGuess == word.length())
                 WordIsGuessed = true;
-            else if (wrongGuess == 6)
+            else if (wrongGuess == 7)
             {
                 break;
             }
         } 
         return WordIsGuessed;
+    }
+
+    public static void image(int wrongGuess)
+    {
+        if (wrongGuess == 1)
+        {
+
+            System.out.println("   +----------------------------------+  ");
+            System.out.println("   |                                  | ");
+            System.out.println("   |                                  | ");
+            System.out.println("   |  ");
+            System.out.println("   |  ");
+            System.out.println("   |  ");
+            System.out.println("   |  ");
+            System.out.println("   |  ");
+            System.out.println("   |  ");
+            System.out.println("   |  ");
+            System.out.println("   |  ");
+            System.out.println("   |  ");
+            System.out.println("   |  ");
+            System.out.println("   |  ");
+            System.out.println("   |  ");
+            System.out.println("   |  ");
+            System.out.println(" --^-- "); 
+
+        }
+        else if (wrongGuess == 2)
+        {
+            System.out.println("   +----------------------------------+  ");
+            System.out.println("   |                                  | ");
+            System.out.println("   |                                  | ");
+            System.out.println("   |                                 _     ");
+            System.out.println("   |                               /   \\ ");
+            System.out.println("   |                              (     ) ");
+            System.out.println("   |                                \\ / ");
+            System.out.println("   |  ");
+            System.out.println("   |  ");
+            System.out.println("   |  ");
+            System.out.println("   |  ");
+            System.out.println("   |  ");
+            System.out.println("   |  ");
+            System.out.println("   |  ");
+            System.out.println("   |  ");
+            System.out.println("   |  ");
+            System.out.println(" --^-- "); 
+
+        }
+        else if (wrongGuess == 3)
+        {
+            System.out.println("   +----------------------------------+  ");
+            System.out.println("   |                                  | ");
+            System.out.println("   |                                  | ");
+            System.out.println("   |                                 _     ");
+            System.out.println("   |                               /   \\ ");
+            System.out.println("   |                              (     ) ");
+            System.out.println("   |                                \\ / ");
+            System.out.println("   |                               __|__ ");
+            System.out.println("   |                                 |   ");
+            System.out.println("   |                                 |   ");
+            System.out.println("   |                                 |");
+            System.out.println("   |                                 | ");
+            System.out.println("   |  ");
+            System.out.println("   |  ");
+            System.out.println("   |  ");
+            System.out.println("   |  ");
+            System.out.println("   |  ");
+            System.out.println("   |  ");
+            System.out.println(" --^-- "); 
+
+        }
+        else if (wrongGuess == 4)
+        {
+            System.out.println("   +----------------------------------+  ");
+            System.out.println("   |                                  | ");
+            System.out.println("   |                                  | ");
+            System.out.println("   |                                 _     ");
+            System.out.println("   |                               /   \\ ");
+            System.out.println("   |                              (     ) ");
+            System.out.println("   |                                \\ / ");
+            System.out.println("   |                               __|__ ");
+            System.out.println("   |                                 |  \\ ");
+            System.out.println("   |                                 |   \\ ");
+            System.out.println("   |                                 |    \\");
+            System.out.println("   |                                 |     \\");
+            System.out.println("   |  ");
+            System.out.println("   |  ");
+            System.out.println("   |  ");
+            System.out.println("   |  ");
+            System.out.println("   |  ");
+            System.out.println("   |  ");
+            System.out.println(" --^-- "); 
+
+        }
+        else if (wrongGuess == 5)
+        {
+            System.out.println("   +----------------------------------+  ");
+            System.out.println("   |                                  | ");
+            System.out.println("   |                                  | ");
+            System.out.println("   |                                 _     ");
+            System.out.println("   |                               /   \\ ");
+            System.out.println("   |                              (     ) ");
+            System.out.println("   |                                \\ / ");
+            System.out.println("   |                               __|__ ");
+            System.out.println("   |                              /  |  \\ ");
+            System.out.println("   |                             /   |   \\ ");
+            System.out.println("   |                            /    |    \\");
+            System.out.println("   |                           /     |     \\");
+            System.out.println("   |  ");
+            System.out.println("   |  ");
+            System.out.println("   |  ");
+            System.out.println("   |  ");
+            System.out.println("   |  ");
+            System.out.println("   |  ");
+            System.out.println(" --^-- "); 
+
+        }
+        else if (wrongGuess == 6)
+        {
+            System.out.println("   +----------------------------------+  ");
+            System.out.println("   |                                  | ");
+            System.out.println("   |                                  | ");
+            System.out.println("   |                                 _     ");
+            System.out.println("   |                               /   \\ ");
+            System.out.println("   |                              (     ) ");
+            System.out.println("   |                                \\ / ");
+            System.out.println("   |                               __|__ ");
+            System.out.println("   |                              /  |  \\ ");
+            System.out.println("   |                             /   |   \\ ");
+            System.out.println("   |                            /    |    \\");
+            System.out.println("   |                           /     |     \\");
+            System.out.println("   |                                  \\ ");
+            System.out.println("   |                                   \\");
+            System.out.println("   |                                    \\");
+            System.out.println("   |                                     \\");
+            System.out.println("   |  ");
+            System.out.println("   |  ");
+            System.out.println(" --^-- "); 
+
+        }
+        else if (wrongGuess == 7)
+        {
+            System.out.println("   +---------------------------+  ");
+            System.out.println("   |                           | ");
+            System.out.println("   |                           | ");
+            System.out.println("   |                           _     ");
+            System.out.println("   |                         /   \\ ");
+            System.out.println("   |                        (     ) ");
+            System.out.println("   |                          \\ / ");
+            System.out.println("   |                         __|__ ");
+            System.out.println("   |                        /  |   \\");
+            System.out.println("   |                       /   |    \\ ");
+            System.out.println("   |                      /    |     \\ ");
+            System.out.println("   |                     /     |      \\ ");
+            System.out.println("   |                          / \\ ");
+            System.out.println("   |                         /   \\");
+            System.out.println("   |                        /     \\");
+            System.out.println("   |                       /       \\ ");
+            System.out.println("   |  ");
+            System.out.println("   |  ");
+            System.out.println(" --^-- "); 
+
+        }
+        return;
     }
 
     public static String wordBank()

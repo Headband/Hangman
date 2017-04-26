@@ -7,12 +7,38 @@ public class V32
         String word = wordBank();
         String[] letters = new String[26];
 
+        instructions();
+
         Scanner checker = new Scanner (System.in);
         boolean b = check(letters,checker,word);
         if (b == true)
             System.out.println("*** [You win!] ***");
         else
             System.out.println ("D; [You lose!]");
+    }
+
+    public static void instructions()
+    {
+        System.out.println ("|      - Please scale the window to fit this box.      |");
+        System.out.println ("|      - Make sure to inlclude the text at the bottom. |");
+        System.out.println ("|      - You have 7 guesses to get the word.           |");
+        System.out.println ("|                                                      |");
+        System.out.println ("|                                                      |");
+        System.out.println ("|                                                      |");
+        System.out.println ("|                                                      |");
+        System.out.println ("|                                                      |");
+        System.out.println ("|                                                      |");
+        System.out.println ("|                                                      |");
+        System.out.println ("|                                                      |");
+        System.out.println ("|                                                      |");
+        System.out.println ("|                                                      |");
+        System.out.println ("|                                                      |");
+        System.out.println ("|                                                      |");
+        System.out.println ("|      - Now you can type a letter.                    |");
+        System.out.println ("|                                                      |");
+        System.out.println ("|                                                      |");
+        System.out.println ("|                                                      |");
+        System.out.println ("|                                                      |");
     }
 
     public static boolean check (String[] letters, Scanner checker, String word)
@@ -29,6 +55,7 @@ public class V32
             System.out.println ();
             System.out.println ("--- Guess a letter ---");
             String input = checker.nextLine();
+            input = input.toLowerCase();
 
             boolean validGuess = true;
             for(int i = 0; i <= word.length(); i++)
@@ -74,14 +101,27 @@ public class V32
             }
 
             image(wrongGuess);
-            
+
+            for(int j = 0; j < word.length(); j++)
+            {
+                for(int k = 0; k < correctLetter.length; k++)
+                {
+                    if(correctLetter[k].equals(word.charAt(j)))
+                    {
+                        System.out.print ("_");
+                    }
+                    else
+                        System.out.print (word.charAt(j));
+                }
+            }
+
             if (correctGuess == word.length())
                 WordIsGuessed = true;
             else if (wrongGuess == 7)
             {
                 break;
             }
-        } 
+        }
         return WordIsGuessed;
     }
 
